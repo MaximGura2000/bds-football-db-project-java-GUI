@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.but.feec.footballdb.exceptions.ExceptionHandler;
 
 
 public class App extends Application {
@@ -23,17 +24,14 @@ public class App extends Application {
             loader = new FXMLLoader(getClass().getResource("Login.fxml"));
             mainStage = loader.load();
 
-            primaryStage.setTitle("BDS JavaFX Demo");
+            primaryStage.setTitle("Football Database");
             Scene scene = new Scene(mainStage);
             setUserAgentStylesheet(STYLESHEET_MODENA);
-//            String myStyle = getClass().getResource("css/myStyle.css").toExternalForm();
-//            scene.getStylesheets().add(myStyle);
-//
-//            primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("logos/vut.jpg")));
+            primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.png")));
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception ex) {
-//            ExceptionHandler.handleException(ex);
+           ExceptionHandler.handleException(ex);
         }
     }
 

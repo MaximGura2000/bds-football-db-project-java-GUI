@@ -11,15 +11,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.but.feec.footballdb.App;
 import org.but.feec.footballdb.data.PersonRepository;
-//import org.but.feec.footballdb.exceptions.DataAccessException;
-//import org.but.feec.footballdb.exceptions.ExceptionHandler;
-//import org.but.feec.footballdb.exceptions.ResourceNotFoundException;
+import org.but.feec.footballdb.exceptions.DataAccessException;
+import org.but.feec.footballdb.exceptions.ExceptionHandler;
+import org.but.feec.footballdb.exceptions.SearchException;
 import org.but.feec.footballdb.services.AuthService;
 import org.controlsfx.validation.ValidationSupport;
 import org.controlsfx.validation.Validator;
@@ -27,7 +26,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Optional;
 
 public class LoginController {
 
@@ -37,8 +35,6 @@ public class LoginController {
     public Label usernameLabel;
     @FXML
     public Label passwordLabel;
-    //@FXML
-    //public Label vutLogo;
     @FXML
     private Button signInButton;
     @FXML
@@ -70,11 +66,9 @@ public class LoginController {
             }
         });
 
-        //initializeLogos();
         initializeServices();
         initializeValidations();
 
-        logger.info("LoginController initialized");
     }
 
     private void initializeValidations() {
@@ -89,15 +83,6 @@ public class LoginController {
         authService = new AuthService(personRepository);
     }
 
-//    private void initializeLogos() {
-//        Image vutImage = new Image(App.class.getResourceAsStream("logos/vut-logo-eng.png"));
-//        ImageView vutLogoImage = new ImageView(vutImage);
-//        vutLogoImage.setFitHeight(85);
-//        vutLogoImage.setFitWidth(150);
-//        vutLogoImage.setPreserveRatio(true);
-//        vutLogo.setGraphic(vutLogoImage);
-//    }
-
     public void signInActionHandler(ActionEvent event) {
         handleSignIn();
     }
@@ -106,62 +91,62 @@ public class LoginController {
         String username = usernameTextfield.getText();
         String password = passwordTextField.getText();
 
-//        try {
-//            boolean authenticated = authService.authenticate(username, password);
-//            if (authenticated) {
-//                showPersonsView();
-//            } else {
-//                showInvalidPaswordDialog();
-//            }
-//        } catch (ResourceNotFoundException | DataAccessException e) {
-//            showInvalidPaswordDialog();
-//        }
+        try {
+            boolean authenticated = authService.authenticate(username, password);
+            if (authenticated) {
+                showPersonsView();
+            } else {
+                showWrongPaswordDialog();
+            }
+        } catch (SearchException | DataAccessException e) {
+            showWrongPaswordDialog();
+        }
     }
 
-//    private void showPersonsView() {
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader();
-//            fxmlLoader.setLocation(App.class.getResource("fxml/Persons.fxml"));
-//            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
-//            Stage stage = new Stage();
-//            stage.setTitle("BDS JavaFX Demo App");
-//            stage.setScene(scene);
-//
-//            Stage stageOld = (Stage) signInButton.getScene().getWindow();
-//            stageOld.close();
-//
-//            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/vut.jpg")));
-//            authConfirmDialog();
-//
-//            stage.show();
-//        } catch (IOException ex) {
-//            ExceptionHandler.handleException(ex);
-//        }
-//    }
-//
-//    private void showInvalidPaswordDialog() {
-//        Alert alert = new Alert(Alert.AlertType.ERROR);
-//        alert.setTitle("Unauthenticated");
-//        alert.setHeaderText("The user is not authenticated");
-//        alert.setContentText("Please provide a valid username and password");//ww  w . j  a  va2s  .  co  m
-//
-//        alert.showAndWait();
-//    }
-//
-//
-//    private void authConfirmDialog() {
-//        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//        alert.setTitle("Logging confirmation");
-//        alert.setHeaderText("You were successfully logged in.");
-//
-//        Timeline idlestage = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
-//
-//            @Override
-//            public void handle(ActionEvent event) {
-//                alert.setResult(ButtonType.CANCEL);
-//                alert.hide();
-//            }
-//        }));
+    private void showPersonsView() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/Persons.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) signInButton.getScene().getWindow();
+            stageOld.close();
+
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/vut.jpg")));
+            authConfirmDialog();
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+   }
+
+    private void showWrongPaswordDialog() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Unauthenticated");
+        alert.setHeaderText("The user is not authenticated");
+        alert.setContentText("Please provide a valid username and password");
+
+        alert.showAndWait();
+    }
+
+
+    private void authConfirmDialog() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logging confirmation");
+        alert.setHeaderText("You were successfully logged in.");
+
+        Timeline idlestage = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                alert.setResult(ButtonType.CANCEL);
+                alert.hide();
+            }
+        }));
 //        idlestage.setCycleCount(1);
 //        idlestage.play();
 //
@@ -172,7 +157,7 @@ public class LoginController {
 //        } else if (result.get() == ButtonType.CANCEL) {
 //            System.out.println("cancel clicked");
 //        }
-//    }
+    }
 
     public void handleOnEnterActionPassword(ActionEvent dragEvent) {
         handleSignIn();
