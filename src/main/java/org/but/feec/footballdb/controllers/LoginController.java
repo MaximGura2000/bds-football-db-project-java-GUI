@@ -68,7 +68,6 @@ public class LoginController {
 
         initializeServices();
         initializeValidations();
-
     }
 
     private void initializeValidations() {
@@ -106,7 +105,7 @@ public class LoginController {
     private void showPersonsView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(App.class.getResource("fxml/Persons.fxml"));
+            fxmlLoader.setLocation(App.class.getResource("fxml/Users.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
             Stage stage = new Stage();
             stage.setTitle("Football Database GUI");
@@ -115,7 +114,7 @@ public class LoginController {
             Stage stageOld = (Stage) signInButton.getScene().getWindow();
             stageOld.close();
 
-            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/vut.jpg")));
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.png")));
             authConfirmDialog();
 
             stage.show();

@@ -6,6 +6,7 @@ org\but\feec\footballdb\App.class
 org\but\feec\footballdb\data\PersonRepository.class
 org\but\feec\footballdb\Main.class
 org\but\feec\footballdb\controllers\LoginController.class
+org\but\feec\footballdb\controllers\PersonsController.class
 org\but\feec\footballdb\exceptions\DataAccessException.class
 org\but\feec\footballdb\exceptions\ExceptionHandler.class
 org\but\feec\footballdb\config\DataSourceConfig.class
