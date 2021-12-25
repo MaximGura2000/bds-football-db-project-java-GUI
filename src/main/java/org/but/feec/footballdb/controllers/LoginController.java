@@ -147,8 +147,8 @@ public class LoginController {
                 alert.hide();
             }
         }));
-//        idlestage.setCycleCount(1);
-//        idlestage.play();
+        idlestage.setCycleCount(1);
+        idlestage.play();
 //
 //        Optional<ButtonType> result = alert.showAndWait();
 //
