@@ -24,11 +24,19 @@ public class AuthService {
         }
 
         PersonAuthView personAuthView = findPersonByEmail(username);
+
         if (personAuthView == null) {
             throw new SearchException("Provided username is not found.");
         }
 
-        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), personAuthView.getPassword());
-        return result.verified;
+        //BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), personAuthView.getPassword());
+
+        boolean compare = personAuthView.getPassword().equals(password);
+        if (compare)
+            return true;
+
+        return false;
+
+        //return result.verified;
     }
 }

@@ -11,4 +11,8 @@ public class PersonService {
     {
         this.personRepository = personRepository;
     }
+
+    private char[] hashPassword(char[] password) {
+        return BCrypt.withDefaults().hashToChar(12, password);
+    }
 }

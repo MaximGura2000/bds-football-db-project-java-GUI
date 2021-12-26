@@ -4,8 +4,9 @@ public class PersonAuthView {
     private String email;
     private String password;
 
-    public String getEmail() {
-        return email;
+    public String getEmail()
+    {
+        return this.email;
     }
 
     public void setEmail(String email) {

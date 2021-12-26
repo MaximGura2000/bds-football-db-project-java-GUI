@@ -92,6 +92,7 @@ public class LoginController {
 
         try {
             boolean authenticated = authService.authenticate(username, password);
+            System.out.println(authenticated);
             if (authenticated) {
                 showPersonsView();
             } else {
