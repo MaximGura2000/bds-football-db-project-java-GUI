@@ -92,7 +92,6 @@ public class LoginController {
 
         try {
             boolean authenticated = authService.authenticate(username, password);
-            System.out.println(authenticated);
             if (authenticated) {
                 showPersonsView();
             } else {
@@ -149,14 +148,6 @@ public class LoginController {
         }));
         idlestage.setCycleCount(1);
         idlestage.play();
-//
-//        Optional<ButtonType> result = alert.showAndWait();
-//
-//        if (result.get() == ButtonType.OK) {
-//            System.out.println("ok clicked");
-//        } else if (result.get() == ButtonType.CANCEL) {
-//            System.out.println("cancel clicked");
-//        }
     }
 
     public void handleOnEnterActionPassword(ActionEvent dragEvent) {
