@@ -83,7 +83,7 @@ public class LoginController {
     }
 
     public void signInActionHandler(ActionEvent event) {
-        handleSignIn();
+        handleSignIn();//wrong 3
     }
 
     private void handleSignIn() {
@@ -93,7 +93,7 @@ public class LoginController {
         try {
             boolean authenticated = authService.authenticate(username, password);
             if (authenticated) {
-                showPersonsView();
+                showPersonsView();//wrong 2
             } else {
                 showWrongPaswordDialog();
             }
@@ -105,11 +105,13 @@ public class LoginController {
     private void showPersonsView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
+            System.out.println("Chek1");
             fxmlLoader.setLocation(App.class.getResource("fxml/Users.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
+            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);//wrong 1
             Stage stage = new Stage();
             stage.setTitle("Football Database GUI");
             stage.setScene(scene);
+
 
             Stage stageOld = (Stage) signInButton.getScene().getWindow();
             stageOld.close();

@@ -12,8 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.but.feec.footballdb.App;
-//import org.but.feec.footballdb.api.PersonBasicView;
-//import org.but.feec.footballdb.api.PersonDetailView;
+import org.but.feec.footballdb.api.PersonBasicView;
+import org.but.feec.footballdb.api.PersonDetailView;
 import org.but.feec.footballdb.data.PersonRepository;
 import org.but.feec.footballdb.exceptions.ExceptionHandler;
 import org.but.feec.footballdb.services.PersonService;
@@ -31,22 +31,21 @@ public class PersonsController {
     public Button addPersonButton;
     @FXML
     public Button refreshButton;
-//    @FXML
-//    private TableColumn<PersonBasicView, Long> personsId;
-//    @FXML
-//    private TableColumn<PersonBasicView, String> personsCity;
-//    @FXML
-//    private TableColumn<PersonBasicView, String> personsEmail;
-//    @FXML
-//    private TableColumn<PersonBasicView, String> personsFamilyName;
-//    @FXML
-//    private TableColumn<PersonBasicView, String> personsGivenName;
-//    @FXML
-//    private TableColumn<PersonBasicView, String> personsNickname;
-//    @FXML
-//    private TableView<PersonBasicView> systemPersonsTableView;
-//    @FXML
-//    public MenuItem exitMenuItem;
+    @FXML
+    private TableColumn<PersonBasicView, Long> personsId;
+    @FXML
+    private TableColumn<PersonBasicView, String> personsCity;
+    @FXML
+    private TableColumn<PersonBasicView, String> personsEmail;
+    @FXML
+    private TableColumn<PersonBasicView, String> personsSurname;
+    @FXML
+    private TableColumn<PersonBasicView, String> personsFirstname;
+    @FXML
+    private TableColumn<PersonBasicView, String> personsUsername;
+    @FXML
+    private TableView<PersonBasicView> systemPersonsTableView;
+
 
     private PersonService personService;
     private PersonRepository personRepository;
@@ -58,23 +57,22 @@ public class PersonsController {
     private void initialize() {
         personRepository = new PersonRepository();
         personService = new PersonService(personRepository);
-//        GlyphsDude.setIcon(exitMenuItem, FontAwesomeIcon.CLOSE, "1em");
 
-//        personsId.setCellValueFactory(new PropertyValueFactory<PersonBasicView, Long>("id"));
-//        personsCity.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("city"));
-//        personsEmail.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("email"));
-//        personsFamilyName.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("familyName"));
-//        personsGivenName.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("givenName"));
-//        personsNickname.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("nickname"));
-//
-//
-//        ObservableList<PersonBasicView> observablePersonsList = initializePersonsData();
-//        systemPersonsTableView.setItems(observablePersonsList);
-//
-//        systemPersonsTableView.getSortOrder().add(personsId);
+        personsId.setCellValueFactory(new PropertyValueFactory<PersonBasicView, Long>("user_id"));
+        personsCity.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("city"));
+        personsEmail.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("email"));
+        personsSurname.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("surname"));
+        personsFirstname.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("firstname"));
+        personsUsername.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("username"));
+
+
+        ObservableList<PersonBasicView> observablePersonsList = initializePersonsData();
+        systemPersonsTableView.setItems(observablePersonsList);
+
+        systemPersonsTableView.getSortOrder().add(personsId);
 
         initializeTableViewSelection();
-        loadIcons();
+        //loadIcons();
 
         logger.info("PersonsController initialized");
     }
@@ -83,72 +81,72 @@ public class PersonsController {
         MenuItem edit = new MenuItem("Edit person");
         MenuItem detailedView = new MenuItem("Detailed person view");
         edit.setOnAction((ActionEvent event) -> {
-//            PersonBasicView personView = systemPersonsTableView.getSelectionModel().getSelectedItem();
-//            try {
-//                FXMLLoader fxmlLoader = new FXMLLoader();
-//                fxmlLoader.setLocation(App.class.getResource("fxml/PersonEdit.fxml"));
-//                Stage stage = new Stage();
-//                stage.setUserData(personView);
-//                stage.setTitle("BDS JavaFX Edit Person");
-//
-//                PersonsEditController controller = new PersonsEditController();
-//                controller.setStage(stage);
-//                fxmlLoader.setController(controller);
-//
-//                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
-//
-//                stage.setScene(scene);
-//
-//                stage.show();
-//            } catch (IOException ex) {
-//                ExceptionHandler.handleException(ex);
-//            }
-//        });
-//
-//        detailedView.setOnAction((ActionEvent event) -> {
-//            PersonBasicView personView = systemPersonsTableView.getSelectionModel().getSelectedItem();
-//            try {
-//                FXMLLoader fxmlLoader = new FXMLLoader();
-//                fxmlLoader.setLocation(App.class.getResource("fxml/PersonsDetailView.fxml"));
-//                Stage stage = new Stage();
-//
-//                Long personId = personView.getId();
-//                PersonDetailView personDetailView = personService.getPersonDetailView(personId);
-//
-//                stage.setUserData(personDetailView);
-//                stage.setTitle("BDS JavaFX Persons Detailed View");
-//
-//                PersonsDetailViewController controller = new PersonsDetailViewController();
-//                controller.setStage(stage);
-//                fxmlLoader.setController(controller);
-//
-//                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
-//
-//                stage.setScene(scene);
-//
-//                stage.show();
-//            } catch (IOException ex) {
-//                ExceptionHandler.handleException(ex);
-//            }
+            PersonBasicView personView = systemPersonsTableView.getSelectionModel().getSelectedItem();
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(App.class.getResource("fxml/PersonEdit.fxml"));
+                Stage stage = new Stage();
+                stage.setUserData(personView);
+                stage.setTitle("Football Database Edit Person");
+
+                PersonsEditController controller = new PersonsEditController();
+                controller.setStage(stage);
+                fxmlLoader.setController(controller);
+
+                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+
+                stage.setScene(scene);
+
+                stage.show();
+            } catch (IOException ex) {
+                ExceptionHandler.handleException(ex);
+            }
         });
+
+        detailedView.setOnAction((ActionEvent event) -> {
+            PersonBasicView personView = systemPersonsTableView.getSelectionModel().getSelectedItem();
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(App.class.getResource("fxml/PersonsDetailView.fxml"));
+                Stage stage = new Stage();
+
+                Long personId = personView.getId();
+               PersonDetailView personDetailView = personService.getPersonDetailView(personId);
+
+                stage.setUserData(personDetailView);
+                stage.setTitle("Football Database Users Detailed View");
+
+                /*PersonsDetailViewController controller = new PersonsDetailViewController();
+                controller.setStage(stage);
+                fxmlLoader.setController(controller);*/
+
+                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+
+                stage.setScene(scene);
+
+                stage.show();
+            } catch (IOException ex) {
+                ExceptionHandler.handleException(ex);
+            }
+      });
 
 
         ContextMenu menu = new ContextMenu();
         menu.getItems().add(edit);
         menu.getItems().addAll(detailedView);
-        //systemPersonsTableView.setContextMenu(menu);
+        systemPersonsTableView.setContextMenu(menu);
     }
 
-//    private ObservableList<PersonBasicView> initializePersonsData() {
-//        List<PersonBasicView> persons = personService.getPersonsBasicView();
-//        return FXCollections.observableArrayList(persons);
-//    }
+    private ObservableList<PersonBasicView> initializePersonsData() {
+        List<PersonBasicView> persons = personService.getPersonsBasicView();
+        return FXCollections.observableArrayList(persons);
+    }
 
-    private void loadIcons() {
-        Image vutLogoImage = new Image(App.class.getResourceAsStream("logos/vut-logo-eng.png"));
-        ImageView vutLogo = new ImageView(vutLogoImage);
-        vutLogo.setFitWidth(150);
-        vutLogo.setFitHeight(50);
+    private void loadIcons() {//change
+        //Image vutLogoImage = new Image(App.class.getResourceAsStream("logos/vut-logo-eng.png"));
+        //ImageView vutLogo = new ImageView(vutLogoImage);
+        //vutLogo.setFitWidth(150);
+        //vutLogo.setFitHeight(50);
     }
 
     public void handleExitMenuItem(ActionEvent event) {
