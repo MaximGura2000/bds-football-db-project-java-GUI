@@ -34,15 +34,15 @@ public class UserController {
     @FXML
     private TableColumn<UserBasicView, Long> user_id;
     @FXML
-    private TableColumn<UserBasicView, String> personsCity;
+    private TableColumn<UserBasicView, String> userCity;
     @FXML
-    private TableColumn<UserBasicView, String> personsEmail;
+    private TableColumn<UserBasicView, String> userEmail;
     @FXML
-    private TableColumn<UserBasicView, String> personsSurname;
+    private TableColumn<UserBasicView, String> userSurname;
     @FXML
-    private TableColumn<UserBasicView, String> personsFirstname;
+    private TableColumn<UserBasicView, String> userFirstname;
     @FXML
-    private TableColumn<UserBasicView, String> personsUsername;
+    private TableColumn<UserBasicView, String> userUsername;
     @FXML
     private TableView<UserBasicView> systemPersonsTableView;
 
@@ -58,12 +58,12 @@ public class UserController {
         userRepository = new UserRepository();
         userService = new UserService(userRepository);
 
-        user_id.setCellValueFactory(new PropertyValueFactory<UserBasicView, Long>("user_id"));
-        personsCity.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("city"));
-        personsEmail.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("email"));
-        personsSurname.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("surname"));
-        personsFirstname.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("firstname"));
-        personsUsername.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("username"));
+        user_id.setCellValueFactory(new PropertyValueFactory<UserBasicView, Long>("u.user_id"));
+        userCity.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("city"));
+        userEmail.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("email"));
+        userSurname.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("surname"));
+        userFirstname.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("firstname"));
+        userUsername.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("username"));
 
 
         ObservableList<UserBasicView> observableUserList = initializeUserData();
@@ -111,7 +111,7 @@ public class UserController {
                 Stage stage = new Stage();
 
                 Long personId = personView.getId();
-               UserDetailView userDetailView = userService.getPersonDetailView(personId);
+                UserDetailView userDetailView = userService.getPersonDetailView(personId);
 
                 stage.setUserData(userDetailView);
                 stage.setTitle("Football Database Users Detailed View");

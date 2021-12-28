@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public List<UserBasicView> getPersonsBasicView() {
-        return userRepository.getPersonsBasicView();
+        return userRepository.getUserBasicView();
     }
 
     private char[] hashPassword(char[] password) {

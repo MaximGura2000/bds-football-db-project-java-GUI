@@ -51,7 +51,7 @@ public class UserRepository {
         return null;
     }
 
-    public List<UserBasicView> getPersonsBasicView() {
+    public List<UserBasicView> getUserBasicView() {
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "SELECT u.user_id, email, firstname, surname, username, city" +
@@ -78,6 +78,10 @@ public class UserRepository {
 
     private UserBasicView mapToUserBasicView(ResultSet rs) throws SQLException {
         UserBasicView userBasicView = new UserBasicView();
+//        System.out.println(rs.getLong("user_id"));
+//        System.out.println("user_id");
+//        System.out.println(rs.getString("surname"));
+
         userBasicView.setId(rs.getLong("user_id"));
         userBasicView.setEmail(rs.getString("email"));
         userBasicView.setGivenName(rs.getString("firstname"));
@@ -91,7 +95,7 @@ public class UserRepository {
         UserDetailView userDetailView = new UserDetailView();
         userDetailView.setUserId(rs.getLong("user_id"));
         userDetailView.setEmail(rs.getString("email"));
-        userDetailView.setFirstname(rs.getString("first_name"));
+        userDetailView.setFirstname(rs.getString("firstname"));
         userDetailView.setSurname(rs.getString("surname"));
         userDetailView.setUsername(rs.getString("nickname"));
         userDetailView.setCity(rs.getString("city"));

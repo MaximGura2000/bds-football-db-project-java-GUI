@@ -17,8 +17,8 @@ public class UserBasicView {
         return idProperty().get();
     }
 
-    public void setId(Long userId) {
-        this.idProperty().setValue(userId);
+    public void setId(Long user_id) {
+        this.idProperty().setValue(user_id);
     }
 
     public String getCity() {
