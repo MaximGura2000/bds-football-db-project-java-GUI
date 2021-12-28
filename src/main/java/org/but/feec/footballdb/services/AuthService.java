@@ -2,7 +2,7 @@ package org.but.feec.footballdb.services;
 
 import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.exceptions.SearchException;
-import org.but.feec.footballdb.api.PersonAuthView;
+import org.but.feec.footballdb.api.UserAuthView;
 
 public class AuthService {
 
@@ -13,8 +13,8 @@ public class AuthService {
         this.userRepository = userRepository;
     }
 
-    private PersonAuthView findPersonByEmail(String email) {
-        return userRepository.findPersonByEmail(email);
+    private UserAuthView findPersonByEmail(String email) {
+        return userRepository.findUserByEmail(email);
     }
 
     public boolean authenticate(String username, String password) {
@@ -22,15 +22,15 @@ public class AuthService {
             return false;
         }
 
-        PersonAuthView personAuthView = findPersonByEmail(username);
+        UserAuthView userAuthView = findPersonByEmail(username);
 
-        if (personAuthView == null) {
+        if (userAuthView == null) {
             throw new SearchException("Provided username is not found.");
         }
 
-        //BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), personAuthView.getPassword());
+        //BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), userAuthView.getPassword());
 
-        boolean compare = personAuthView.getPassword().equals(password);
+        boolean compare = userAuthView.getPassword().equals(password);
         if (compare)
             return true;
 

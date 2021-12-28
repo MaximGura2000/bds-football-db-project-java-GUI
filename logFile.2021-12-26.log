@@ -422,8 +422,8 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 Caused by: java.lang.NullPointerException: Input stream must not be null
 	at javafx.scene.image.Image.validateInputStream(Image.java:1135)
 	at javafx.scene.image.Image.<init>(Image.java:702)
-	at org.but.feec.footballdb.controllers.PersonsController.loadIcons(PersonsController.java:148)
-	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:77)
+	at org.but.feec.footballdb.controllers.UserController.loadIcons(PersonsController.java:148)
+	at org.but.feec.footballdb.controllers.UserController.initialize(PersonsController.java:77)
 	... 75 common frames omitted
 37418 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -513,8 +513,8 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 Caused by: java.lang.NullPointerException: Input stream must not be null
 	at javafx.scene.image.Image.validateInputStream(Image.java:1135)
 	at javafx.scene.image.Image.<init>(Image.java:702)
-	at org.but.feec.footballdb.controllers.PersonsController.loadIcons(PersonsController.java:148)
-	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:77)
+	at org.but.feec.footballdb.controllers.UserController.loadIcons(PersonsController.java:148)
+	at org.but.feec.footballdb.controllers.UserController.initialize(PersonsController.java:77)
 	... 75 common frames omitted
 97810 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -604,8 +604,8 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 Caused by: java.lang.NullPointerException: Input stream must not be null
 	at javafx.scene.image.Image.validateInputStream(Image.java:1135)
 	at javafx.scene.image.Image.<init>(Image.java:702)
-	at org.but.feec.footballdb.controllers.PersonsController.loadIcons(PersonsController.java:148)
-	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:77)
+	at org.but.feec.footballdb.controllers.UserController.loadIcons(PersonsController.java:148)
+	at org.but.feec.footballdb.controllers.UserController.initialize(PersonsController.java:77)
 	... 75 common frames omitted
 18972 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -695,6 +695,6 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 Caused by: java.lang.NullPointerException: Input stream must not be null
 	at javafx.scene.image.Image.validateInputStream(Image.java:1135)
 	at javafx.scene.image.Image.<init>(Image.java:702)
-	at org.but.feec.footballdb.controllers.PersonsController.loadIcons(PersonsController.java:148)
-	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:77)
+	at org.but.feec.footballdb.controllers.UserController.loadIcons(PersonsController.java:148)
+	at org.but.feec.footballdb.controllers.UserController.initialize(PersonsController.java:77)
 	... 75 common frames omitted

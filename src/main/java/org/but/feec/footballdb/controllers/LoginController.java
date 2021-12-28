@@ -107,7 +107,7 @@ public class LoginController {
         try {
             boolean authenticated = authService.authenticate(username, password);
             if (authenticated) {
-                showPersonsView();
+                showUserView();
             } else {
                 showWrongPaswordDialog();
             }
@@ -116,7 +116,7 @@ public class LoginController {
         }
     }
 
-    private void showPersonsView() {
+    private void showUserView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(App.class.getResource("fxml/Users.fxml"));

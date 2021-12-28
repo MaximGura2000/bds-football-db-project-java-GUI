@@ -17,7 +17,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox minHeight="625.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.but.feec.footballdb.controllers.PersonsController">
+<VBox minHeight="625.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.but.feec.footballdb.controllers.UserController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -55,7 +55,7 @@
                                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" style="&#10;" text="Persons" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                                 <TableView fx:id="systemPersonsTableView" layoutY="67.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                     <columns>
-                                        <TableColumn fx:id="personsId" minWidth="75.0" prefWidth="80.00000303983688" text="user_id" />
+                                        <TableColumn fx:id="user_id" minWidth="75.0" prefWidth="80.00000303983688" text="user_id" />
                                         <TableColumn fx:id="personsEmail" minWidth="75.0" prefWidth="160.00001525878906" text="email" />
                                         <TableColumn fx:id="personsFirstname" minWidth="75.0" prefWidth="120.0" text="firstname" />
                                         <TableColumn fx:id="personsSurname" minWidth="75.0" prefWidth="120.0" text="surname" />

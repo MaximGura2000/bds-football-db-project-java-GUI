@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserRepository {
 
-    public PersonAuthView findPersonByEmail(String email) {
+    public UserAuthView findUserByEmail(String email) {
 
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
@@ -21,7 +21,7 @@ public class UserRepository {
             preparedStatement.setString(1, email);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToPersonAuth(resultSet);
+                    return mapToUserAuth(resultSet);
                 }
             }
         } catch (SQLException e) {
@@ -30,7 +30,7 @@ public class UserRepository {
         return null;
     }
 
-    public PersonDetailView findPersonDetailedView(Long personId) {
+    public UserDetailView findPersonDetailedView(Long user_id) {
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "SELECT u.user_id, email, firstname, surname, username, city, house_number, street" +
@@ -39,10 +39,10 @@ public class UserRepository {
                              "LEFT JOIN public.address a ON h.address_id = a.address_id" +
                              "WHERE u.user_id = ?;")
         ) {
-            preparedStatement.setLong(1, personId);
+            preparedStatement.setLong(1, user_id);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToPersonDetailView(resultSet);
+                    return mapToUserDetailView(resultSet);
                 }
             }
         } catch (SQLException e) {
@@ -51,7 +51,7 @@ public class UserRepository {
         return null;
     }
 
-    public List<PersonBasicView> getPersonsBasicView() {
+    public List<UserBasicView> getPersonsBasicView() {
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "SELECT u.user_id, email, firstname, surname, username, city" +
@@ -59,44 +59,44 @@ public class UserRepository {
                              " LEFT JOIN user_has_address h on u.user_id = h.user_id" +
                              " LEFT JOIN public.address a ON h.address_id = a.address_id;");
              ResultSet resultSet = preparedStatement.executeQuery();) {
-            List<PersonBasicView> personBasicViews = new ArrayList<>();
+            List<UserBasicView> userBasicViews = new ArrayList<>();
             while (resultSet.next()) {
-                personBasicViews.add(mapToPersonBasicView(resultSet));
+                userBasicViews.add(mapToUserBasicView(resultSet));
             }
-            return personBasicViews;
+            return userBasicViews;
         } catch (SQLException e) {
-            throw new DataAccessException("Persons basic view could not be loaded.", e);//tut1
+            throw new DataAccessException("Persons basic view could not be loaded.", e);
         }
     }
 
-    private PersonAuthView mapToPersonAuth(ResultSet rs) throws SQLException {
-        PersonAuthView person = new PersonAuthView();
+    private UserAuthView mapToUserAuth(ResultSet rs) throws SQLException {
+        UserAuthView person = new UserAuthView();
         person.setEmail(rs.getString("email"));
         person.setPassword(rs.getString("password"));
         return person;
     }
 
-    private PersonBasicView mapToPersonBasicView(ResultSet rs) throws SQLException {
-        PersonBasicView personBasicView = new PersonBasicView();
-        personBasicView.setId(rs.getLong("user_id"));
-        personBasicView.setEmail(rs.getString("email"));
-        personBasicView.setGivenName(rs.getString("firstname"));
-        personBasicView.setSurname(rs.getString("surname"));
-        personBasicView.setUsername(rs.getString("username"));
-        personBasicView.setCity(rs.getString("city"));
-        return personBasicView;
+    private UserBasicView mapToUserBasicView(ResultSet rs) throws SQLException {
+        UserBasicView userBasicView = new UserBasicView();
+        userBasicView.setId(rs.getLong("user_id"));
+        userBasicView.setEmail(rs.getString("email"));
+        userBasicView.setGivenName(rs.getString("firstname"));
+        userBasicView.setSurname(rs.getString("surname"));
+        userBasicView.setUsername(rs.getString("username"));
+        userBasicView.setCity(rs.getString("city"));
+        return userBasicView;
     }
 
-    private PersonDetailView mapToPersonDetailView(ResultSet rs) throws SQLException {
-        PersonDetailView personDetailView = new PersonDetailView();
-        personDetailView.setUserId(rs.getLong("id_person"));
-        personDetailView.setEmail(rs.getString("email"));
-        personDetailView.setFirstname(rs.getString("first_name"));
-        personDetailView.setSurname(rs.getString("surname"));
-        personDetailView.setUsername(rs.getString("nickname"));
-        personDetailView.setCity(rs.getString("city"));
-        personDetailView.sethouseNumber(rs.getString("house_number"));
-        personDetailView.setStreet(rs.getString("street"));
-        return personDetailView;
+    private UserDetailView mapToUserDetailView(ResultSet rs) throws SQLException {
+        UserDetailView userDetailView = new UserDetailView();
+        userDetailView.setUserId(rs.getLong("user_id"));
+        userDetailView.setEmail(rs.getString("email"));
+        userDetailView.setFirstname(rs.getString("first_name"));
+        userDetailView.setSurname(rs.getString("surname"));
+        userDetailView.setUsername(rs.getString("nickname"));
+        userDetailView.setCity(rs.getString("city"));
+        userDetailView.sethouseNumber(rs.getString("house_number"));
+        userDetailView.setStreet(rs.getString("street"));
+        return userDetailView;
     }
 }
