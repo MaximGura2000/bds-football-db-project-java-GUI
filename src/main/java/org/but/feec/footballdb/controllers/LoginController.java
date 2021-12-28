@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -35,6 +36,8 @@ public class LoginController {
     public Label usernameLabel;
     @FXML
     public Label passwordLabel;
+    @FXML
+    public Label logo;
     @FXML
     private Button signInButton;
     @FXML
@@ -66,6 +69,7 @@ public class LoginController {
             }
         });
 
+        setLogo();
         initializeServices();
         initializeValidations();
     }
@@ -82,8 +86,18 @@ public class LoginController {
         authService = new AuthService(personRepository);
     }
 
+    private void setLogo()
+    {
+        Image ballLogo = new Image(App.class.getResourceAsStream("logos/ball-logo.png"));
+        ImageView image = new ImageView(ballLogo);
+        image.setFitHeight(100);
+        image.setFitWidth(1450);
+        image.setPreserveRatio(true);
+        logo.setGraphic(image);
+    }
+
     public void signInActionHandler(ActionEvent event) {
-        handleSignIn();//wrong 3
+        handleSignIn();
     }
 
     private void handleSignIn() {
@@ -93,7 +107,7 @@ public class LoginController {
         try {
             boolean authenticated = authService.authenticate(username, password);
             if (authenticated) {
-                showPersonsView();//wrong 2
+                showPersonsView();
             } else {
                 showWrongPaswordDialog();
             }
@@ -105,9 +119,8 @@ public class LoginController {
     private void showPersonsView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            System.out.println("Chek1");
             fxmlLoader.setLocation(App.class.getResource("fxml/Users.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);//wrong 1
+            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
             Stage stage = new Stage();
             stage.setTitle("Football Database GUI");
             stage.setScene(scene);
@@ -116,7 +129,7 @@ public class LoginController {
             Stage stageOld = (Stage) signInButton.getScene().getWindow();
             stageOld.close();
 
-            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.png")));
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
             authConfirmDialog();
 
             stage.show();
@@ -150,9 +163,5 @@ public class LoginController {
         }));
         idlestage.setCycleCount(1);
         idlestage.play();
-    }
-
-    public void handleOnEnterActionPassword(ActionEvent dragEvent) {
-        handleSignIn();
     }
 }

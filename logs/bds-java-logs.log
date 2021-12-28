@@ -1192,3 +1192,46 @@ Caused by: java.lang.NullPointerException: Input stream must not be null
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:75)
 	... 75 common frames omitted
 16149 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized
+544  [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/Login.fxml
+
+javafx.fxml.LoadException: 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/Login.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2707)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2677)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	at org.but.feec.footballdb.App.start(App.java:25)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:846)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:474)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	... 12 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.but.feec.footballdb.controllers.LoginController.setLogo(LoginController.java:96)
+	at org.but.feec.footballdb.controllers.LoginController.initialize(LoginController.java:72)
+	... 24 common frames omitted
+32920 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized
+230656 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized
+12968 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized
+11390 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized
+13772 [JavaFX Application Thread] INFO  o.b.f.f.c.PersonsController - PersonsController initialized

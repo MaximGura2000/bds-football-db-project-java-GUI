@@ -27,7 +27,7 @@ public class App extends Application {
             primaryStage.setTitle("Football Database");
             Scene scene = new Scene(mainStage);
             setUserAgentStylesheet(STYLESHEET_MODENA);
-            primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.png")));
+            primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception ex) {

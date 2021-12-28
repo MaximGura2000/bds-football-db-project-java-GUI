@@ -72,7 +72,7 @@ public class PersonsController {
         systemPersonsTableView.getSortOrder().add(personsId);
 
         initializeTableViewSelection();
-        //loadIcons();
+        icon();
 
         logger.info("PersonsController initialized");
     }
@@ -142,11 +142,11 @@ public class PersonsController {
         return FXCollections.observableArrayList(persons);
     }
 
-    private void loadIcons() {//change
-        //Image vutLogoImage = new Image(App.class.getResourceAsStream("logos/vut-logo-eng.png"));
-        //ImageView vutLogo = new ImageView(vutLogoImage);
-        //vutLogo.setFitWidth(150);
-        //vutLogo.setFitHeight(50);
+    private void icon() {
+        Image logoImage = new Image(App.class.getResourceAsStream("logos/ball-logo.png"));
+        ImageView ballLogo = new ImageView(logoImage);
+        ballLogo.setFitWidth(150);
+        ballLogo.setFitHeight(50);
     }
 
     public void handleExitMenuItem(ActionEvent event) {
@@ -175,9 +175,9 @@ public class PersonsController {
     }
 
     public void handleRefreshButton(ActionEvent actionEvent) {
-//        ObservableList<PersonBasicView> observablePersonsList = initializePersonsData();
-//        systemPersonsTableView.setItems(observablePersonsList);
-//        systemPersonsTableView.refresh();
-//        systemPersonsTableView.sort();
+        ObservableList<PersonBasicView> observablePersonsList = initializePersonsData();
+        systemPersonsTableView.setItems(observablePersonsList);
+        systemPersonsTableView.refresh();
+        systemPersonsTableView.sort();
     }
 }
