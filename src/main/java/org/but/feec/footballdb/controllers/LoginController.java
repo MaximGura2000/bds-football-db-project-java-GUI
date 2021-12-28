@@ -16,7 +16,7 @@ import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.but.feec.footballdb.App;
-import org.but.feec.footballdb.data.PersonRepository;
+import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.exceptions.DataAccessException;
 import org.but.feec.footballdb.exceptions.ExceptionHandler;
 import org.but.feec.footballdb.exceptions.SearchException;
@@ -45,7 +45,7 @@ public class LoginController {
     @FXML
     private PasswordField passwordTextField;
 
-    private PersonRepository personRepository;
+    private UserRepository userRepository;
     private AuthService authService;
 
     private ValidationSupport validation;
@@ -82,8 +82,8 @@ public class LoginController {
     }
 
     private void initializeServices() {
-        personRepository = new PersonRepository();
-        authService = new AuthService(personRepository);
+        userRepository = new UserRepository();
+        authService = new AuthService(userRepository);
     }
 
     private void setLogo()

@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 import org.but.feec.footballdb.App;
 import org.but.feec.footballdb.api.PersonBasicView;
 import org.but.feec.footballdb.api.PersonDetailView;
-import org.but.feec.footballdb.data.PersonRepository;
+import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.exceptions.ExceptionHandler;
 import org.but.feec.footballdb.services.PersonService;
 import org.slf4j.Logger;
@@ -48,15 +48,15 @@ public class PersonsController {
 
 
     private PersonService personService;
-    private PersonRepository personRepository;
+    private UserRepository userRepository;
 
     public PersonsController() {
     }
 
     @FXML
     private void initialize() {
-        personRepository = new PersonRepository();
-        personService = new PersonService(personRepository);
+        userRepository = new UserRepository();
+        personService = new PersonService(userRepository);
 
         personsId.setCellValueFactory(new PropertyValueFactory<PersonBasicView, Long>("user_id"));
         personsCity.setCellValueFactory(new PropertyValueFactory<PersonBasicView, String>("city"));

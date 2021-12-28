@@ -1,21 +1,20 @@
 package org.but.feec.footballdb.services;
 
-import org.but.feec.footballdb.data.PersonRepository;
-import at.favre.lib.crypto.bcrypt.BCrypt;
+import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.exceptions.SearchException;
 import org.but.feec.footballdb.api.PersonAuthView;
 
 public class AuthService {
 
-    private PersonRepository personRepository;
+    private UserRepository userRepository;
 
-    public AuthService(PersonRepository personRepository)
+    public AuthService(UserRepository userRepository)
     {
-        this.personRepository = personRepository;
+        this.userRepository = userRepository;
     }
 
     private PersonAuthView findPersonByEmail(String email) {
-        return personRepository.findPersonByEmail(email);
+        return userRepository.findPersonByEmail(email);
     }
 
     public boolean authenticate(String username, String password) {

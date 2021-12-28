@@ -357,13 +357,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -373,7 +373,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 13719 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -461,13 +461,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -477,7 +477,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 47630 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -565,13 +565,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -581,7 +581,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 12746 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -638,13 +638,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 32 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 44 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -654,7 +654,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 47 common frames omitted
 61531 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -742,13 +742,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -758,7 +758,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 24581 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -846,13 +846,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -862,7 +862,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 30148 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -950,13 +950,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -966,7 +966,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 25122 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -1054,13 +1054,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -1070,7 +1070,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 28512 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -1158,13 +1158,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -1174,7 +1174,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 46752 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -1262,13 +1262,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -1278,7 +1278,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 24432 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -1366,13 +1366,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -1382,7 +1382,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted
 28127 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
 file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/Users.fxml
@@ -1470,13 +1470,13 @@ Caused by: java.lang.reflect.InvocationTargetException: null
 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
 	... 63 common frames omitted
 Caused by: org.but.feec.footballdb.exceptions.DataAccessException: Persons basic view could not be loaded.
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:47)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:47)
 	at org.but.feec.footballdb.services.PersonService.getPersonsBasicView(PersonService.java:24)
 	at org.but.feec.footballdb.controllers.PersonsController.initializePersonsData(PersonsController.java:141)
 	at org.but.feec.footballdb.controllers.PersonsController.initialize(PersonsController.java:69)
 	... 75 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не существует
-  Позиция: 159
+Caused by: org.postgresql.util.PSQLException: пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅ u.id_address пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+  пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 159
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
@@ -1486,5 +1486,5 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец u.id_address не су
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
-	at org.but.feec.footballdb.data.PersonRepository.getPersonsBasicView(PersonRepository.java:40)
+	at org.but.feec.footballdb.data.UserRepository.getPersonsBasicView(PersonRepository.java:40)
 	... 78 common frames omitted

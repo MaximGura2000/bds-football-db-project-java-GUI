@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.but.feec.footballdb.api.PersonBasicView;
 //import org.but.feec.footballdb.api.PersonEditView;
-import org.but.feec.footballdb.data.PersonRepository;
+import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.services.PersonService;
 import org.controlsfx.validation.ValidationSupport;
 import org.controlsfx.validation.Validator;
@@ -41,7 +41,7 @@ public class PersonsEditController {
     private TextField nicknameTextField;
 
     private PersonService personService;
-    private PersonRepository personRepository;
+    private UserRepository userRepository;
     private ValidationSupport validation;
 
     // used to reference the stage and to get passed data through it
@@ -53,8 +53,8 @@ public class PersonsEditController {
 
     @FXML
     public void initialize() {
-        personRepository = new PersonRepository();
-        personService = new PersonService(personRepository);
+        userRepository = new UserRepository();
+        personService = new PersonService(userRepository);
 
         validation = new ValidationSupport();
         validation.registerValidator(idTextField, Validator.createEmptyValidator("The id must not be empty."));
