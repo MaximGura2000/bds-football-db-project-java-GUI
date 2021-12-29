@@ -38,7 +38,7 @@
             <items>
                 <AnchorPane>
                     <children>
-                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="My friends" textAlignment="CENTER" wrapText="false">
+                        <Label alignment="CENTER" layoutX="0.0" layoutY="0.0" minWidth="1.0" prefWidth="-1.0" style="&#10;" text="" textAlignment="CENTER" wrapText="false">
                             <font>
                                 <Font size="18.0" fx:id="x1" />
                             </font>
@@ -52,7 +52,7 @@
                     <content>
                         <AnchorPane id="Content" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-Infinity" prefHeight="517.0" prefWidth="592.0">
                             <children>
-                                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" style="&#10;" text="Persons" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="277.0" style="&#10;" text="Persons" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                                 <TableView fx:id="systemPersonsTableView" layoutY="67.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                     <columns>
                                         <TableColumn fx:id="user_id" minWidth="75.0" prefWidth="80.00000303983688" text="user_id" />
@@ -71,7 +71,7 @@
                 </ScrollPane>
                 <AnchorPane>
                     <children>
-                        <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="My meetings" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <Label alignment="CENTER" font="$x1" layoutX="00.0" layoutY="0.0" style="&#10;" text="" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                     </children>
                 </AnchorPane>
             </items>

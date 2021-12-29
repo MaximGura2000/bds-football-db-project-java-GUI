@@ -156,16 +156,16 @@ public class UserController {
     public void handleAddPersonButton(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(App.class.getResource("fxml/PersonsCreate.fxml"));
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserCreate.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 500);
             Stage stage = new Stage();
-            stage.setTitle("BDS JavaFX Create Person");
+            stage.setTitle("Football Database Create User");
             stage.setScene(scene);
 
 //            Stage stageOld = (Stage) signInButton.getScene().getWindow();
 //            stageOld.close();
 //
-//            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/vut.jpg")));
+//            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
 //            authConfirmDialog();
 
             stage.show();

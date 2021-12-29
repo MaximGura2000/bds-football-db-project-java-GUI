@@ -69,6 +69,28 @@ public class UserRepository {
         }
     }
 
+    public void createUser(UserCreateView userCreateView) {
+        String insertPersonSQL = "INSERT INTO public.user (email, firstname, username, password, surname) VALUES (?,?,?,?,?)";
+        try (Connection connection = DataSourceConfig.getConnection();
+             // would be beneficial if I will return the created entity back
+             PreparedStatement preparedStatement = connection.prepareStatement(insertPersonSQL, Statement.RETURN_GENERATED_KEYS)) {
+            // set prepared statement variables
+            preparedStatement.setString(1, userCreateView.getEmail());
+            preparedStatement.setString(2, userCreateView.getFirstname());
+            preparedStatement.setString(3, userCreateView.getUsername());
+            preparedStatement.setString(4, String.valueOf(userCreateView.getPassword()));
+            preparedStatement.setString(5, userCreateView.getSurname());
+
+            int affectedRows = preparedStatement.executeUpdate();
+
+            if (affectedRows == 0) {
+                throw new DataAccessException("Creating person failed, no rows affected.");
+            }
+        } catch (SQLException e) {
+            throw new DataAccessException("Creating person failed operation on the database failed.");
+        }
+    }
+
     private UserAuthView mapToUserAuth(ResultSet rs) throws SQLException {
         UserAuthView person = new UserAuthView();
         person.setEmail(rs.getString("email"));
