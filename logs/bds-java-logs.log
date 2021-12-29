@@ -702,3 +702,323 @@ Caused by: java.lang.NullPointerException: null
 	at org.controlsfx.validation.ValidationSupport.registerValidator(ValidationSupport.java:328)
 	at org.but.feec.footballdb.controllers.UserCreateController.initialize(UserCreateController.java:54)
 	... 83 common frames omitted
+17102 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+23928 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/UserCreate.fxml
+
+javafx.fxml.LoadException: 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/UserCreate.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2707)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2677)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	at org.but.feec.footballdb.controllers.UserController.handleAddPersonButton(UserController.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1857)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1729)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8889)
+	at javafx.scene.control.Button.fire(Button.java:203)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3856)
+	at javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	... 72 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.controlsfx.validation.ValidationSupport.setRequired(ValidationSupport.java:98)
+	at org.controlsfx.validation.ValidationSupport.registerValidator(ValidationSupport.java:297)
+	at org.controlsfx.validation.ValidationSupport.registerValidator(ValidationSupport.java:328)
+	at org.but.feec.footballdb.controllers.UserCreateController.initialize(UserCreateController.java:54)
+	... 83 common frames omitted
+16554 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+14234 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+23552 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+15765 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+18126 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+19541 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+30856 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+32288 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+33498 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+34394 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+35254 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+36117 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+18145 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+21511 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+22816 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+24778 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+25906 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+27182 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+28347 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+29579 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+30742 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+31615 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+32501 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+33367 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+34372 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+35147 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+36065 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+13640 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+16030 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+17357 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+18696 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+21243 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+23624 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+24798 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+26002 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+26764 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+27674 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+28674 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+29458 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+30444 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+31540 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+32367 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+33885 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+34620 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+14340 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+17797 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+19825 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+21188 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+22483 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+23788 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+24968 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+26007 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+27194 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+28655 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+139051 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+15060 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+18469 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+20004 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+13018 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+15835 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+18932 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+20104 [JavaFX Application Thread] ERROR o.b.f.f.controllers.LoginController - 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/UserDelete.fxml
+
+javafx.fxml.LoadException: 
+file:/C:/Users/Admin/Desktop/fekt/BDS/3%20projekt/bds-football-db-project-java-GUI/target/bds-football-db-project-java-GUI-1.0.0.jar!/org/but/feec/footballdb/fxml/UserDelete.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2707)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2677)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	at org.but.feec.footballdb.controllers.UserController.handleDeleteUserButton(UserController.java:192)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1857)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1729)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8889)
+	at javafx.scene.control.Button.fire(Button.java:203)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3856)
+	at javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	... 72 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.but.feec.footballdb.controllers.UserDeleteController.initialize(UserDeleteController.java:53)
+	... 83 common frames omitted
+14686 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+18329 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+25631 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+27559 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+28721 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+61302 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+64107 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+14096 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+55502 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+56895 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+58367 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+67495 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+78659 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+83070 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+22473 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+25443 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+26917 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+28211 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+29236 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+30794 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+41425 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+21783 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+26165 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+29070 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+30325 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+31948 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+33163 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+34906 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+36066 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+38075 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+39289 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+40597 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+41678 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+22295 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+26139 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+30265 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+31789 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+33083 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+14180 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+16853 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+22862 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+24721 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+25912 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+14140 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+11512 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+23299 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+40552 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+42169 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+43080 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+45096 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+46249 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+47266 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+48150 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+49147 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+43802 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+63574 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - PersonCreateController initialized
+65793 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+67192 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+69265 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+71706 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+73078 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized
+75640 [JavaFX Application Thread] INFO  o.b.f.f.c.UserCreateController - UserInfoController initialized
+77325 [JavaFX Application Thread] INFO  o.b.f.f.controllers.UserController - UserController initialized

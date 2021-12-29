@@ -34,46 +34,38 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <SplitPane dividerPositions="0.14715048975957254, 0.7782724844167408" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <items>
-                <AnchorPane>
-                    <children>
-                        <Label alignment="CENTER" layoutX="0.0" layoutY="0.0" minWidth="1.0" prefWidth="-1.0" style="&#10;" text="" textAlignment="CENTER" wrapText="false">
-                            <font>
-                                <Font size="18.0" fx:id="x1" />
-                            </font>
-                            <textFill>
-                                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
-                            </textFill>
-                        </Label>
-                    </children>
-                </AnchorPane>
-                <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+                <ScrollPane prefHeight="548.0" prefWidth="949.0">
                     <content>
-                        <AnchorPane id="Content" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-Infinity" prefHeight="517.0" prefWidth="592.0">
+                        <AnchorPane id="Content" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-Infinity" prefHeight="554.0" prefWidth="926.0">
                             <children>
-                                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="277.0" style="&#10;" text="Persons" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                                <TableView fx:id="systemPersonsTableView" layoutY="67.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="277.0" style="&#10;" text="Users Table" textAlignment="CENTER" wrapText="false">
+                           <textFill>
+                                      <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+                           </textFill>
+                           <font>
+                                      <Font size="18.0" fx:id="x1" />
+                           </font></Label>
+                                <TableView fx:id="systemPersonsTableView" layoutX="14.0" layoutY="52.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="406.0" prefWidth="914.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-2.0">
                                     <columns>
-                                        <TableColumn fx:id="user_id" minWidth="75.0" prefWidth="80.00000303983688" text="user_id" />
-                                        <TableColumn fx:id="userEmail" minWidth="75.0" prefWidth="160.00001525878906" text="email" />
-                                        <TableColumn fx:id="userFirstname" minWidth="75.0" prefWidth="120.0" text="firstname" />
-                                        <TableColumn fx:id="userSurname" minWidth="75.0" prefWidth="120.0" text="surname" />
-                                        <TableColumn fx:id="userCity" minWidth="75.0" prefWidth="120.0" text="city" />
-                                        <TableColumn fx:id="userUsername" minWidth="75.0" prefWidth="120.0" text="username" />
+                                        <TableColumn fx:id="user_id" minWidth="75.0" prefWidth="198.3999605178833" text="user id" />
+                                        <TableColumn fx:id="userEmail" minWidth="44.000030517578125" prefWidth="120.80003356933594" text="email" />
+                                        <TableColumn fx:id="userFirstname" minWidth="75.0" prefWidth="131.199951171875" text="firstname" />
+                                        <TableColumn fx:id="userSurname" minWidth="75.0" prefWidth="164.0" text="surname" />
+                                        <TableColumn fx:id="userCity" minWidth="75.0" prefWidth="137.59991455078125" text="city" />
+                                        <TableColumn fx:id="userUsername" minWidth="75.0" prefWidth="171.20001220703125" text="username" />
                                     </columns>
                                 </TableView>
-                                <Button fx:id="addPersonButton" layoutX="24.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleAddPersonButton" text="Add person" />
-                                <Button fx:id="refreshButton" layoutX="127.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleRefreshButton" text="Refresh" />
+                                <Button fx:id="addUserButton" layoutX="204.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleAddUserButton" prefWidth="78.0" text="Add user" />
+                                <Button fx:id="refreshButton" layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleRefreshButton" text="Refresh" />
+                                <Button fx:id="deleteUserButton" layoutX="435.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleDeleteUserButton" text="Delete User" />
+                                <Button fx:id="detailUserViewButton" layoutX="645.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleUserInfoViewButton" text="All User Info" />
+                                <Button fx:id="UpdateUserButton" layoutX="829.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleUserUpdateInfoButton" text="Update User" />
                             </children>
                         </AnchorPane>
                     </content>
                 </ScrollPane>
-                <AnchorPane>
-                    <children>
-                        <Label alignment="CENTER" font="$x1" layoutX="00.0" layoutY="0.0" style="&#10;" text="" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                    </children>
-                </AnchorPane>
             </items>
         </SplitPane>
         <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">

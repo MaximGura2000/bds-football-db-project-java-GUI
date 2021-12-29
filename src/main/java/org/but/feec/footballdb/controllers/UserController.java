@@ -28,7 +28,13 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @FXML
-    public Button addPersonButton;
+    public Button addUserButton;
+    @FXML
+    public Button deleteUserButton;
+    @FXML
+    public Button detailUserViewButton;
+    @FXML
+    public Button UpdateUserButton;
     @FXML
     public Button refreshButton;
     @FXML
@@ -58,7 +64,7 @@ public class UserController {
         userRepository = new UserRepository();
         userService = new UserService(userRepository);
 
-        user_id.setCellValueFactory(new PropertyValueFactory<UserBasicView, Long>("u.user_id"));
+        user_id.setCellValueFactory(new PropertyValueFactory<UserBasicView, Long>("id"));
         userCity.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("city"));
         userEmail.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("email"));
         userSurname.setCellValueFactory(new PropertyValueFactory<UserBasicView, String>("surname"));
@@ -89,9 +95,9 @@ public class UserController {
                 stage.setUserData(userView);
                 stage.setTitle("Football Database Edit User");
 
-                UserEditController controller = new UserEditController();
-                controller.setStage(stage);
-                fxmlLoader.setController(controller);
+                //UserEditController controller = new UserEditController();
+                //controller.setStage(stage);
+                //fxmlLoader.setController(controller);
 
                 Scene scene = new Scene(fxmlLoader.load(), 600, 500);
 
@@ -153,7 +159,7 @@ public class UserController {
         System.exit(0);
     }
 
-    public void handleAddPersonButton(ActionEvent actionEvent) {
+    public void handleAddUserButton(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(App.class.getResource("fxml/UserCreate.fxml"));
@@ -162,11 +168,9 @@ public class UserController {
             stage.setTitle("Football Database Create User");
             stage.setScene(scene);
 
-//            Stage stageOld = (Stage) signInButton.getScene().getWindow();
-//            stageOld.close();
-//
-//            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
-//            authConfirmDialog();
+            Stage stageOld = (Stage) addUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
 
             stage.show();
         } catch (IOException ex) {
@@ -179,5 +183,63 @@ public class UserController {
         systemPersonsTableView.setItems(observablePersonsList);
         systemPersonsTableView.refresh();
         systemPersonsTableView.sort();
+    }
+
+    public void handleDeleteUserButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserDelete.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database Delete User");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) deleteUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    public void handleUserInfoViewButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserInfo.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database User All Information View");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) deleteUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    public void handleUserUpdateInfoButton(ActionEvent actionEvent)
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserUpdate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database User Information Update");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) deleteUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
     }
 }
