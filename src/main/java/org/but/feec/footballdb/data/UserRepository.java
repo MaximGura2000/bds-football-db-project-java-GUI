@@ -70,21 +70,29 @@ public class UserRepository {
     }
 
     public void createUser(UserCreateView userCreateView) {
-        String insertPersonSQL = "INSERT INTO public.user (email, firstname, username, password, surname) VALUES (?,?,?,?,?)";
+        //String insertUserSQL = "INSERT INTO public.user (email, firstname, username, surname, password) VALUES (?,?,?,?,?)";
+        System.out.println("Check");
         try (Connection connection = DataSourceConfig.getConnection();
-             // would be beneficial if I will return the created entity back
-             PreparedStatement preparedStatement = connection.prepareStatement(insertPersonSQL, Statement.RETURN_GENERATED_KEYS)) {
-            // set prepared statement variables
+             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO" +
+                     "public.user (email, firstname, username, surname, password) VALUES ('?','?','?','?','?');"))
+        {
+
             preparedStatement.setString(1, userCreateView.getEmail());
             preparedStatement.setString(2, userCreateView.getFirstname());
             preparedStatement.setString(3, userCreateView.getUsername());
-            preparedStatement.setString(4, String.valueOf(userCreateView.getPassword()));
-            preparedStatement.setString(5, userCreateView.getSurname());
+            preparedStatement.setString(4, userCreateView.getSurname());
+            preparedStatement.setString(5, String.valueOf(userCreateView.getPassword()));
+            System.out.println("Check2");
 
-            int affectedRows = preparedStatement.executeUpdate();
+            System.out.println(preparedStatement);
+            preparedStatement.execute();
 
-            if (affectedRows == 0) {
-                throw new DataAccessException("Creating person failed, no rows affected.");
+            //int affectedRows = preparedStatement.executeUpdate();
+            System.out.println("Check3");
+            int a=2;
+
+            if (a==1) {
+                throw new DataAccessException("Creating user failed, no rows affected.");
             }
         } catch (SQLException e) {
             throw new DataAccessException("Creating person failed operation on the database failed.");
@@ -100,9 +108,6 @@ public class UserRepository {
 
     private UserBasicView mapToUserBasicView(ResultSet rs) throws SQLException {
         UserBasicView userBasicView = new UserBasicView();
-//        System.out.println(rs.getLong("user_id"));
-//        System.out.println("user_id");
-//        System.out.println(rs.getString("surname"));
 
         userBasicView.setId(rs.getLong("user_id"));
         userBasicView.setEmail(rs.getString("email"));
@@ -124,5 +129,23 @@ public class UserRepository {
         userDetailView.sethouseNumber(rs.getString("house_number"));
         userDetailView.setStreet(rs.getString("street"));
         return userDetailView;
+    }
+
+    public boolean UserDelete (String email)
+    {
+        try (Connection connection = DataSourceConfig.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "DELETE FROM public.user u" +
+                             " WHERE u.email = ?;")
+        ) {
+            preparedStatement.setString(1, email);
+            int deleteTry = preparedStatement.executeUpdate();
+            if (deleteTry == 0)
+                return false;
+            else
+                return true;
+        } catch (SQLException e) {
+            throw new DataAccessException("Find user by ID with addresses failed.", e);
+        }
     }
 }

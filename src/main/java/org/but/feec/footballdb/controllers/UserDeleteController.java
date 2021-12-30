@@ -17,6 +17,7 @@ import javafx.util.Duration;
 import org.but.feec.footballdb.App;
 //import org.but.feec.footballdb.api.UserCreateView;
 import org.but.feec.footballdb.data.UserRepository;
+import org.but.feec.footballdb.exceptions.DataAccessException;
 import org.but.feec.footballdb.exceptions.ExceptionHandler;
 import org.but.feec.footballdb.services.UserService;
 import org.controlsfx.validation.ValidationSupport;
@@ -25,10 +26,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class UserDeleteController {
-    private static final Logger logger = LoggerFactory.getLogger(UserCreateController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserDeleteController.class);
 
     @FXML
     public Button userDelete;
@@ -54,7 +56,60 @@ public class UserDeleteController {
 
     public void handleDeleteUser(ActionEvent actionEvent)
     {
+        String deleteEmail = deleteUserEmail.getText();
+        if (userRepository.UserDelete(deleteEmail))
+        {
+            showDelete();
+            System.out.println("Usera udalili");
 
+        }
+        else
+        {
+            System.out.println("User ne najden v db");
+            showNonDelete();
+
+        }
+    }
+
+    private void showDelete()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/SuccessfullDelete.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 450, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) allUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        }
+        catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    private void showNonDelete()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UnsuccessfullDelete.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 450, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) allUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
     }
 
     public void handleAllUsersButton(ActionEvent actionEvent)

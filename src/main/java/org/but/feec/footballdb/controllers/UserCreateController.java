@@ -70,17 +70,17 @@ public class UserCreateController {
     @FXML
     void handleCreateNewUser(ActionEvent event) {
         String email = newUserEmail.getText();
-        String firstName = newUserFirstname.getText();
-        String lastName = newUserSurname.getText();
-        String nickname = newUserUsername.getText();
+        String firstname = newUserFirstname.getText();
+        String surname = newUserSurname.getText();
+        String username = newUserUsername.getText();
         String password = newUserPassword.getText();
 
         UserCreateView userCreateView = new UserCreateView();
         userCreateView.setPassword(password.toCharArray());
         userCreateView.setEmail(email);
-        userCreateView.setFirstname(firstName);
-        userCreateView.setSurname(lastName);
-        userCreateView.setUsername(nickname);
+        userCreateView.setFirstname(firstname);
+        userCreateView.setSurname(surname);
+        userCreateView.setUsername(username);
 
         userService.createUser(userCreateView);
 

@@ -9,11 +9,13 @@ org\but\feec\footballdb\controllers\LoginController$1.class
 org\but\feec\footballdb\services\AuthService.class
 org\but\feec\footballdb\App.class
 org\but\feec\footballdb\controllers\UserInfoController.class
+org\but\feec\footballdb\controllers\USDController.class
 org\but\feec\footballdb\controllers\UserCreateController$1.class
 org\but\feec\footballdb\controllers\UserDeleteController.class
 org\but\feec\footballdb\api\UserBasicView.class
 org\but\feec\footballdb\services\UserService.class
 org\but\feec\footballdb\controllers\LoginController.class
+org\but\feec\footballdb\controllers\SDController.class
 org\but\feec\footballdb\api\UserDetailView.class
 org\but\feec\footballdb\exceptions\ExceptionHandler.class
 org\but\feec\footballdb\data\UserRepository.class

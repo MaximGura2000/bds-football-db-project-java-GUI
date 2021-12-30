@@ -29,7 +29,7 @@ public class UserService {
         // the following three lines can be written in one code line (only for more clear explanation it is written in three lines
         char[] originalPassword = userCreateView.getPassword();
         char[] hashedPassword = hashPassword(originalPassword);
-        userCreateView.setPassword(hashedPassword);
+        userCreateView.setPassword(originalPassword);
 
         userRepository.createUser(userCreateView);
     }
