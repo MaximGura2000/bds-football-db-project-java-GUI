@@ -1,11 +1,13 @@
 org\but\feec\footballdb\api\UserAuthView.class
 org\but\feec\footballdb\controllers\UserCreateController.class
+org\but\feec\footballdb\controllers\NoInfoController.class
 org\but\feec\footballdb\Main.class
 org\but\feec\footballdb\exceptions\DataAccessException.class
 org\but\feec\footballdb\controllers\UserUpdateController.class
 org\but\feec\footballdb\config\DataSourceConfig.class
 org\but\feec\footballdb\api\UserCreateView.class
 org\but\feec\footballdb\controllers\LoginController$1.class
+org\but\feec\footballdb\controllers\UserInfoTableController.class
 org\but\feec\footballdb\services\AuthService.class
 org\but\feec\footballdb\App.class
 org\but\feec\footballdb\controllers\UserInfoController.class

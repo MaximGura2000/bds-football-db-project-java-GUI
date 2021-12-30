@@ -75,16 +75,15 @@ public class UserCreateController {
         String username = newUserUsername.getText();
         String password = newUserPassword.getText();
 
-        UserCreateView userCreateView = new UserCreateView();
-        userCreateView.setPassword(password.toCharArray());
-        userCreateView.setEmail(email);
-        userCreateView.setFirstname(firstname);
-        userCreateView.setSurname(surname);
-        userCreateView.setUsername(username);
-
-        userService.createUser(userCreateView);
-
-        personCreatedConfirmationDialog();
+        if (userRepository.createUser(email, firstname, username, surname, password))
+        {
+            System.out.println("User create");
+            personCreatedConfirmationDialog();
+        }
+        else
+        {
+            System.out.println("User not create");
+        }
     }
 
     private void personCreatedConfirmationDialog() {

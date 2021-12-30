@@ -51,24 +51,16 @@ public class UserDeleteController {
         validation = new ValidationSupport();
         validation.registerValidator(deleteUserEmail, Validator.createEmptyValidator("The email must not be empty."));
 
-        logger.info("UserInfoController initialized");
+        logger.info("User Delete Controller initialized");
     }
 
     public void handleDeleteUser(ActionEvent actionEvent)
     {
         String deleteEmail = deleteUserEmail.getText();
         if (userRepository.UserDelete(deleteEmail))
-        {
             showDelete();
-            System.out.println("Usera udalili");
-
-        }
         else
-        {
-            System.out.println("User ne najden v db");
             showNonDelete();
-
-        }
     }
 
     private void showDelete()

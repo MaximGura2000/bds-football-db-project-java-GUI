@@ -11,7 +11,7 @@
     <children>
         <AnchorPane prefHeight="452.0" prefWidth="668.0">
             <children>
-                <Button fx:id="userInfo" layoutX="256.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleUserInfo" text="User full information">
+                <Button fx:id="userInfo" layoutX="255.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleUserInfo" text="User full information">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -21,16 +21,21 @@
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Text layoutX="50.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wright down user email to view full information">
+                <Text layoutX="39.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wright down user email to view full information">
                     <font>
                         <Font size="28.0" />
                     </font>
                 </Text>
-                <TextField fx:id="userInfoEmail" alignment="CENTER" layoutX="206.0" layoutY="210.0" prefHeight="46.0" prefWidth="255.0" promptText="User email">
+                <TextField fx:id="userInfoEmail" alignment="CENTER" layoutX="206.0" layoutY="181.0" prefHeight="46.0" prefWidth="255.0" promptText="User email">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </TextField>
+            <Button fx:id="allUserInfoButton" layoutX="230.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleAllUserInfo" prefHeight="38.0" prefWidth="208.0" text="All users full information">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </children>

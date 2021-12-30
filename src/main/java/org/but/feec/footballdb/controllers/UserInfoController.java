@@ -28,6 +28,8 @@ public class UserInfoController {
     @FXML
     public Button allUserButton;
     @FXML
+    public Button allUserInfoButton;
+    @FXML
     private TextField userInfoEmail;
 
     private UserService userService;
@@ -42,12 +44,81 @@ public class UserInfoController {
         validation = new ValidationSupport();
         validation.registerValidator(userInfoEmail, Validator.createEmptyValidator("The email must not be empty."));
 
-        logger.info("UserInfoController initialized");
+        logger.info("User Info Controller initialized");
     }
 
     public void handleUserInfo(ActionEvent actionEvent)
     {
+        String infoEmail = userInfoEmail.getText();
+        if(userRepository.UserInfo(infoEmail))
+        {
+            System.out.println("Tut budet view chelika");
+            ShowUserInfo();
+        }
+        else
+            ShowNoInfo();
+    }
 
+    private void ShowUserInfo()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserInfoTable.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+
+            Stage stageOld = (Stage) userInfo.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    private void ShowNoInfo()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/NoInfo.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) userInfo.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    public void handleAllUserInfo(ActionEvent actionEvent)
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/UserInfoTable.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+
+            Stage stageOld = (Stage) userInfo.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
     }
 
     public void handleAllUsersButton(ActionEvent actionEvent)

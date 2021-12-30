@@ -1,26 +1,23 @@
 package org.but.feec.footballdb.api;
 
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class UserDetailView {
-    private LongProperty userId = new SimpleLongProperty();
+    private StringProperty userId = new SimpleStringProperty();
     private StringProperty email = new SimpleStringProperty();
     private StringProperty firstname = new SimpleStringProperty();
     private StringProperty surname = new SimpleStringProperty();
     private StringProperty username = new SimpleStringProperty();
-    private StringProperty country = new SimpleStringProperty();
     private StringProperty city = new SimpleStringProperty();
     private StringProperty street = new SimpleStringProperty();
     private StringProperty houseNumber = new SimpleStringProperty();
 
-    public Long getUserId() {
+    public String getUserId() {
         return idProperty().get();
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.idProperty().setValue(userId);
     }
 
@@ -56,16 +53,6 @@ public class UserDetailView {
         this.usernameProperty().set(username);
     }
 
-    public String getCountry()
-    {
-        return  countryProperty().get();
-    }
-
-    public void setCountry(String country)
-    {
-        this.countryProperty().setValue(country);
-    }
-
     public String getCity() {
         return cityProperty().get();
     }
@@ -90,7 +77,7 @@ public class UserDetailView {
         this.streetProperty().setValue(street);
     }
 
-    public LongProperty idProperty() {
+    public StringProperty idProperty() {
         return userId;
     }
 
@@ -108,10 +95,6 @@ public class UserDetailView {
 
     public StringProperty usernameProperty() {
         return username;
-    }
-
-    public StringProperty countryProperty() {
-        return country;
     }
 
     public StringProperty cityProperty() {

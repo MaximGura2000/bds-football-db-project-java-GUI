@@ -13,7 +13,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.but.feec.footballdb.App;
 import org.but.feec.footballdb.api.UserBasicView;
-import org.but.feec.footballdb.api.UserDetailView;
 import org.but.feec.footballdb.data.UserRepository;
 import org.but.feec.footballdb.exceptions.ExceptionHandler;
 import org.but.feec.footballdb.services.UserService;
@@ -50,7 +49,7 @@ public class UserController {
     @FXML
     private TableColumn<UserBasicView, String> userUsername;
     @FXML
-    private TableView<UserBasicView> systemPersonsTableView;
+    private TableView<UserBasicView> systemUsersTableView;
 
 
     private UserService userService;
@@ -73,79 +72,18 @@ public class UserController {
 
 
         ObservableList<UserBasicView> observableUserList = initializeUserData();
-        systemPersonsTableView.setItems(observableUserList);
+        systemUsersTableView.setItems(observableUserList);
 
-        systemPersonsTableView.getSortOrder().add(user_id);
+        systemUsersTableView.getSortOrder().add(user_id);
 
-        initializeTableViewSelection();
         icon();
 
         logger.info("UserController initialized");
     }
 
-    private void initializeTableViewSelection() {
-        MenuItem edit = new MenuItem("Edit user");
-        MenuItem detailedView = new MenuItem("Detailed user view");
-        edit.setOnAction((ActionEvent event) -> {
-            UserBasicView userView = systemPersonsTableView.getSelectionModel().getSelectedItem();
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(App.class.getResource("fxml/UserEdit.fxml"));
-                Stage stage = new Stage();
-                stage.setUserData(userView);
-                stage.setTitle("Football Database Edit User");
-
-                //UserEditController controller = new UserEditController();
-                //controller.setStage(stage);
-                //fxmlLoader.setController(controller);
-
-                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
-
-                stage.setScene(scene);
-
-                stage.show();
-            } catch (IOException ex) {
-                ExceptionHandler.handleException(ex);
-            }
-        });
-
-        detailedView.setOnAction((ActionEvent event) -> {
-            UserBasicView personView = systemPersonsTableView.getSelectionModel().getSelectedItem();
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(App.class.getResource("fxml/UserDetailView.fxml"));
-                Stage stage = new Stage();
-
-                Long personId = personView.getId();
-                UserDetailView userDetailView = userService.getPersonDetailView(personId);
-
-                stage.setUserData(userDetailView);
-                stage.setTitle("Football Database Users Detailed View");
-
-                /*PersonsDetailViewController controller = new PersonsDetailViewController();
-                controller.setStage(stage);
-                fxmlLoader.setController(controller);*/
-
-                Scene scene = new Scene(fxmlLoader.load(), 600, 500);
-
-                stage.setScene(scene);
-
-                stage.show();
-            } catch (IOException ex) {
-                ExceptionHandler.handleException(ex);
-            }
-      });
-
-
-        ContextMenu menu = new ContextMenu();
-        menu.getItems().add(edit);
-        menu.getItems().addAll(detailedView);
-        systemPersonsTableView.setContextMenu(menu);
-    }
-
     private ObservableList<UserBasicView> initializeUserData() {
-        List<UserBasicView> persons = userService.getPersonsBasicView();
-        return FXCollections.observableArrayList(persons);
+        List<UserBasicView> users = userService.getPersonsBasicView();
+        return FXCollections.observableArrayList(users);
     }
 
     private void icon() {
@@ -180,9 +118,9 @@ public class UserController {
 
     public void handleRefreshButton(ActionEvent actionEvent) {
         ObservableList<UserBasicView> observablePersonsList = initializeUserData();
-        systemPersonsTableView.setItems(observablePersonsList);
-        systemPersonsTableView.refresh();
-        systemPersonsTableView.sort();
+        systemUsersTableView.setItems(observablePersonsList);
+        systemUsersTableView.refresh();
+        systemUsersTableView.sort();
     }
 
     public void handleDeleteUserButton(ActionEvent actionEvent) {

@@ -17,10 +17,6 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public UserDetailView getPersonDetailView(Long id) {
-        return userRepository.findPersonDetailedView(id);
-    }
-
     public List<UserBasicView> getPersonsBasicView() {
         return userRepository.getUserBasicView();
     }
@@ -31,7 +27,7 @@ public class UserService {
         char[] hashedPassword = hashPassword(originalPassword);
         userCreateView.setPassword(originalPassword);
 
-        userRepository.createUser(userCreateView);
+        //userRepository.createUser(userCreateView);
     }
 
     private char[] hashPassword(char[] password) {

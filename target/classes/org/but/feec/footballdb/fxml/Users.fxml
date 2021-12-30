@@ -47,7 +47,7 @@
                            <font>
                                       <Font size="18.0" fx:id="x1" />
                            </font></Label>
-                                <TableView fx:id="systemPersonsTableView" layoutX="14.0" layoutY="52.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="406.0" prefWidth="914.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-2.0">
+                                <TableView fx:id="systemUsersTableView" layoutX="14.0" layoutY="52.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="406.0" prefWidth="914.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-2.0">
                                     <columns>
                                         <TableColumn fx:id="user_id" minWidth="75.0" prefWidth="198.3999605178833" text="user id" />
                                         <TableColumn fx:id="userEmail" minWidth="44.000030517578125" prefWidth="120.80003356933594" text="email" />
