@@ -161,4 +161,25 @@ public class UserRepository {
         }
         return false;
     }
+
+    public boolean UpdateUser (String column, String newInfo, String email)
+    {
+        try (Connection connection = DataSourceConfig.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(
+                     "UPDATE public.user u SET " + column + " = ?" +
+                             " WHERE u.email = ?;")
+        ) {
+            preparedStatement.setString(1, newInfo);
+            preparedStatement.setString(2, email);
+            int updateTry = preparedStatement.executeUpdate();
+            if (updateTry != 0)
+            {
+                return true;
+            }
+            }
+        catch (SQLException e) {
+            throw new DataAccessException("Update user by Email with addresses failed.", e);
+        }
+        return false;
+    }
 }

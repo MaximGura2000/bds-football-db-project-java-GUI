@@ -1,4 +1,5 @@
 org\but\feec\footballdb\api\UserAuthView.class
+org\but\feec\footballdb\controllers\UnsuccessfullUpdateController.class
 org\but\feec\footballdb\controllers\UserCreateController.class
 org\but\feec\footballdb\controllers\NoInfoController.class
 org\but\feec\footballdb\Main.class
@@ -21,5 +22,6 @@ org\but\feec\footballdb\controllers\SDController.class
 org\but\feec\footballdb\api\UserDetailView.class
 org\but\feec\footballdb\exceptions\ExceptionHandler.class
 org\but\feec\footballdb\data\UserRepository.class
+org\but\feec\footballdb\controllers\SuccessfullUpdateController.class
 org\but\feec\footballdb\controllers\UserController.class
 org\but\feec\footballdb\exceptions\SearchException.class

@@ -29,6 +29,10 @@ public class UserUpdateController {
     public Button allUserButton;
     @FXML
     private TextField userUpdateEmail;
+    @FXML
+    private TextField variable;
+    @FXML
+    private TextField newValue;
 
     private UserService userService;
     private UserRepository userRepository;
@@ -41,13 +45,70 @@ public class UserUpdateController {
 
         validation = new ValidationSupport();
         validation.registerValidator(userUpdateEmail, Validator.createEmptyValidator("The email must not be empty."));
+        validation.registerValidator(variable, Validator.createEmptyValidator("The email must not be empty."));
+        validation.registerValidator(newValue, Validator.createEmptyValidator("The email must not be empty."));
 
         logger.info("UserInfoController initialized");
     }
 
     public void handleUserUpdate(ActionEvent actionEvent)
     {
+        String column = variable.getText();
+        String newInfo = newValue.getText();
+        String email = userUpdateEmail.getText();
+        if (userRepository.UpdateUser(column, newInfo, email))
+        {
+            System.out.println("Update");
+            showUpdate();
+        }
+        else
+        {
+            System.out.println("No Update");
+            showNoUpdate();
+        }
 
+    }
+
+    private void showUpdate()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/SUpdate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) userUpdate.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        }
+        catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    private void showNoUpdate()
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/USUpdate.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database GUI");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) userUpdate.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        }
+        catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
     }
 
     public void handleAllUsersButton(ActionEvent actionEvent)

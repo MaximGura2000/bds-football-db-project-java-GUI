@@ -21,16 +21,26 @@
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Text layoutX="41.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wright down user email to edit information">
+                <Text layoutX="28.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wright down user email to edit information">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Text>
-                <TextField fx:id="userUpdateEmail" alignment="CENTER" layoutX="206.0" layoutY="210.0" prefHeight="46.0" prefWidth="255.0" promptText="User email">
+                <TextField fx:id="userUpdateEmail" alignment="CENTER" layoutX="206.0" layoutY="246.0" prefHeight="43.0" prefWidth="255.0" promptText="User email">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </TextField>
+            <TextField fx:id="newValue" alignment="CENTER" layoutX="204.0" layoutY="184.0" prefHeight="43.0" prefWidth="255.0" promptText="New Value">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="variable" alignment="CENTER" layoutX="206.0" layoutY="118.0" prefHeight="43.0" prefWidth="255.0" promptText="Variable to change">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
             </children>
         </AnchorPane>
     </children>

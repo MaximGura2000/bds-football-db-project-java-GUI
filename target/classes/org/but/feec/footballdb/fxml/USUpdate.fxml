@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.but.feec.footballdb.controllers.UnsuccessfullUpdateController">
+   <children>
+      <AnchorPane prefHeight="413.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="allUserButton" layoutX="256.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleAllUsersButton" prefHeight="34.0" prefWidth="88.0" text="All Users">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Text layoutX="93.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unsuccessfull Update">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
