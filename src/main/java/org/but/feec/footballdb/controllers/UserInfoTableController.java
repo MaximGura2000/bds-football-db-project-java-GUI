@@ -46,8 +46,6 @@ public class UserInfoTableController {
     @FXML
     private TableView<UserDetailView> systemPersonsTableView;
 
-
-    private UserService userService;
     private UserRepository userRepository;
 
     @FXML

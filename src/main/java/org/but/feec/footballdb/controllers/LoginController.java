@@ -120,7 +120,7 @@ public class LoginController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(App.class.getResource("fxml/Users.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1050, 600);
+            Scene scene = new Scene(fxmlLoader.load(), 940, 625);
             Stage stage = new Stage();
             stage.setTitle("Football Database GUI");
             stage.setScene(scene);

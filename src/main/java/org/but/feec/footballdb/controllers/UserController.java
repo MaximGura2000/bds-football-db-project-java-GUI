@@ -50,6 +50,8 @@ public class UserController {
     private TableColumn<UserBasicView, String> userUsername;
     @FXML
     private TableView<UserBasicView> systemUsersTableView;
+    @FXML
+    private Button FootballButton;
 
 
     private UserService userService;
@@ -151,7 +153,7 @@ public class UserController {
             stage.setTitle("Football Database User All Information View");
             stage.setScene(scene);
 
-            Stage stageOld = (Stage) deleteUserButton.getScene().getWindow();
+            Stage stageOld = (Stage) detailUserViewButton.getScene().getWindow();
             stageOld.close();
             stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
 
@@ -171,7 +173,27 @@ public class UserController {
             stage.setTitle("Football Database User Information Update");
             stage.setScene(scene);
 
-            Stage stageOld = (Stage) deleteUserButton.getScene().getWindow();
+            Stage stageOld = (Stage) UpdateUserButton.getScene().getWindow();
+            stageOld.close();
+            stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
+
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+    }
+
+    public void handleFootballTeam(ActionEvent actionEvent)
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(App.class.getResource("fxml/Football.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 750, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Football Database User Information Update");
+            stage.setScene(scene);
+
+            Stage stageOld = (Stage) FootballButton.getScene().getWindow();
             stageOld.close();
             stage.getIcons().add(new Image(App.class.getResourceAsStream("logos/ball.jpg")));
 

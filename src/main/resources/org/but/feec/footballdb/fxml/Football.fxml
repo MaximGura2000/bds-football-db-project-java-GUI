@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.but.feec.footballdb.controllers.FootballController">
+   <children>
+      <AnchorPane prefHeight="586.0" prefWidth="738.0">
+         <children>
+            <SplitPane prefHeight="514.0" prefWidth="737.0">
+               <items>
+                  <ScrollPane prefHeight="440.0" prefWidth="737.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="737.0">
+                           <children>
+                              <TableView fx:id="FootballTableView" prefHeight="462.0" prefWidth="738.0">
+                                <columns>
+                                  <TableColumn fx:id="footballTeamName" prefWidth="401.59997564554214" text="Football Team" />
+                                  <TableColumn fx:id="numberOfTrophy" prefWidth="336.00006103515625" text="Number of trophy" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </items>
+            </SplitPane>
+            <Button fx:id="allUserButton" layoutX="329.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleAllUsersButton" prefHeight="34.0" prefWidth="79.0" text="All Users">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

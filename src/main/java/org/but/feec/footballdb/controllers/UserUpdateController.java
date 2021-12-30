@@ -58,12 +58,10 @@ public class UserUpdateController {
         String email = userUpdateEmail.getText();
         if (userRepository.UpdateUser(column, newInfo, email))
         {
-            System.out.println("Update");
             showUpdate();
         }
         else
         {
-            System.out.println("No Update");
             showNoUpdate();
         }
 

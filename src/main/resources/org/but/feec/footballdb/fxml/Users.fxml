@@ -62,6 +62,11 @@
                                 <Button fx:id="deleteUserButton" layoutX="435.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleDeleteUserButton" text="Delete User" />
                                 <Button fx:id="detailUserViewButton" layoutX="645.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleUserInfoViewButton" text="All User Info" />
                                 <Button fx:id="UpdateUserButton" layoutX="829.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleUserUpdateInfoButton" text="Update User" />
+                        <Button fx:id="FootballButton" layoutX="413.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleFootballTeam" text="Football Teams">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
                             </children>
                         </AnchorPane>
                     </content>
