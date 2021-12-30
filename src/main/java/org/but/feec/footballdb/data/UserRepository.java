@@ -3,12 +3,16 @@ package org.but.feec.footballdb.data;
 import org.but.feec.footballdb.api.*;
 import org.but.feec.footballdb.config.DataSourceConfig;
 import org.but.feec.footballdb.exceptions.DataAccessException;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepository {
+
+    private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
 
     public UserAuthView findUserByEmail(String email) {
 
@@ -68,16 +72,16 @@ public class UserRepository {
     }
 
     public boolean createUser(String email, String firstname, String username, String surname, String password) {
-        System.out.println("Chek2");
+        logger.info("Creation started!");
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "INSERT INTO public.user VALUES (DEFAULT, ?, ?, ?, ?, ?);"))
         {
-            preparedStatement.setString(1, email);
-            preparedStatement.setString(2, firstname);
-            preparedStatement.setString(3, username);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            preparedStatement.setString(3, firstname);
             preparedStatement.setString(4, surname);
-            preparedStatement.setString(5, password);
+            preparedStatement.setString(5, email);
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
 
